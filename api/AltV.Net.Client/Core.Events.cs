@@ -733,5 +733,69 @@ namespace AltV.Net.Client
                 UnansweredClientRpcRequest.Remove(answerid);
             }
         }
+
+        public bool RemoveServerEventListener(string name, Function function)
+        {
+            if (function is null
+            || !ServerEventBus.TryGetValue(name, out var eventHandlers))
+            {
+                return false;
+            }
+            return eventHandlers.Remove(function);
+        }
+
+        public bool RemoveClientEventListener(string name, Function function)
+        {
+            if (function is null
+            || !ClientEventBus.TryGetValue(name, out var eventHandlers))
+            {
+                return false;
+            }
+            return eventHandlers.Remove(function);
+        }
+
+        public bool RemoveWebViewEventListener(IntPtr webViewPtr, string name, Function function)
+        {
+            if (function is null
+            || !WebViewEventBus.TryGetValue(webViewPtr, out var eventHandlerDictionary)
+            || !eventHandlerDictionary.TryGetValue(name, out var eventHandlers))
+            {
+                return false;
+            }
+            return eventHandlers.Remove(function);
+        }
+
+        public bool RemoveAudioEventListener(IntPtr audioPtr, string name, Function function)
+        {
+            if (function is null
+            || !AudioEventBus.TryGetValue(audioPtr, out var eventHandlerDictionary)
+            || !eventHandlerDictionary.TryGetValue(name, out var eventHandlers))
+            {
+                return false;
+            }
+            return eventHandlers.Remove(function);
+        }
+
+        public bool RemoveRmlElementEventListener(IntPtr rmlElementPtr, string name, Function function)
+        {
+            if (function is null
+            || !RmlElementEventBus.TryGetValue(rmlElementPtr, out var eventHandlerDictionary)
+            || !eventHandlerDictionary.TryGetValue(name, out var eventHandlers))
+            {
+                return false;
+            }
+            return eventHandlers.Remove(function);
+        }
+
+        public bool RemoveWebSocketEventListener(IntPtr webSocketPtr, string name, Function function)
+        {
+            if (function is null
+            || !WebSocketEventBus.TryGetValue(webSocketPtr, out var eventHandlerDictionary)
+            || !eventHandlerDictionary.TryGetValue(name, out var eventHandlers))
+            {
+                return false;
+            }
+            return eventHandlers.Remove(function);
+        }
     }
 }
