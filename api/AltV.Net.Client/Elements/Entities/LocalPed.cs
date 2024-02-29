@@ -17,7 +17,7 @@ public class LocalPed : Ped, ILocalPed
         }
     }
 
-    public LocalPed(ICore core, IntPtr nativePointer, uint id) : base(core, GetPedPointer(core, nativePointer), BaseObjectType.LocalVehicle, id)
+    public LocalPed(ICore core, IntPtr nativePointer, uint id) : base(core, GetPedPointer(core, nativePointer), BaseObjectType.LocalPed, id)
     {
         LocalPedNativePointer = nativePointer;
     }
