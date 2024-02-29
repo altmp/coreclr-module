@@ -1,9 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <Authors>FabianTerhorst,zziger,JuzTim</Authors>
+        <Authors>FabianTerhorst,Doxoh,zziger,JuzTim</Authors>
         <Description>AltV .NET Client Async API</Description>
-        <Copyright>FabianTerhorst</Copyright>
+        <Copyright>FabianTerhorst,Doxoh</Copyright>
         <PackageProjectUrl>https://github.com/altmp/coreclr-module</PackageProjectUrl>
         <RepositoryUrl>https://github.com/altmp/coreclr-module</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
@@ -22,7 +22,7 @@
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <AssemblyName>AltV.Net.Client.Async</AssemblyName>
     </PropertyGroup>
-    
+
     <ItemGroup>
         <None Include="license\license.txt">
             <Pack>true</Pack>
