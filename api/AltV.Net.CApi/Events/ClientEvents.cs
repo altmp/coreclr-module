@@ -17,8 +17,8 @@ namespace AltV.Net.CApi.ClientEvents
 
     public delegate void PlayerSpawnModuleDelegate();
     public delegate void PlayerDisconnectModuleDelegate();
-    public delegate void PlayerEnterVehicleModuleDelegate(IntPtr pointer, byte seat);
-    public delegate void PlayerLeaveVehicleModuleDelegate(IntPtr pointer, byte seat);
+    public delegate void PlayerEnterVehicleModuleDelegate(IntPtr baseObject, BaseObjectType type, byte seat);
+    public delegate void PlayerLeaveVehicleModuleDelegate(IntPtr baseObject, BaseObjectType type, byte seat);
     public delegate void PlayerChangeVehicleSeatModuleDelegate(IntPtr pointer, byte oldSeat, byte newSeat);
     public delegate void PlayerChangeAnimationModuleDelegate(IntPtr pointer, uint oldDict, uint newDict, uint oldName, uint newName);
     public delegate void PlayerChangeInteriorModuleDelegate(IntPtr pointer, uint oldIntLoc, uint newIntLoc);

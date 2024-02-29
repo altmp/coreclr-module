@@ -209,9 +209,9 @@ namespace AltV.Net.Client
             _core.OnPlayerDisconnect();
         }
 
-        public static void OnPlayerEnterVehicle(IntPtr pointer, byte seat)
+        public static void OnPlayerEnterVehicle(IntPtr pointer, BaseObjectType type, byte seat)
         {
-            _core.OnPlayerEnterVehicle(pointer, seat);
+            _core.OnPlayerEnterVehicle(pointer, type, seat);
         }
 
         public static void OnGameEntityCreate(IntPtr pointer, byte type)
@@ -396,9 +396,9 @@ namespace AltV.Net.Client
             _core.OnWorldObjectPositionChange(target, type, position);
         }
 
-        public static void OnPlayerLeaveVehicle(IntPtr vehicle, byte seat)
+        public static void OnPlayerLeaveVehicle(IntPtr vehicle, BaseObjectType type, byte seat)
         {
-            _core.OnPlayerLeaveVehicle(vehicle, seat);
+            _core.OnPlayerLeaveVehicle(vehicle, type, seat);
         }
 
         public static void OnWorldObjectStreamIn(IntPtr target, BaseObjectType type)
