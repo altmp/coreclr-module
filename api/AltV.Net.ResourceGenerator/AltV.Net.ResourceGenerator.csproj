@@ -5,8 +5,8 @@
         <Authors>FabianTerhorst</Authors>
         <Description>AltV .NET Core Resource Generator</Description>
         <Copyright>FabianTerhorst</Copyright>
-        <PackageProjectUrl>https://github.com/FabianTerhorst/coreclr-module</PackageProjectUrl>
-        <RepositoryUrl>https://github.com/FabianTerhorst/coreclr-module</RepositoryUrl>
+        <PackageProjectUrl>https://github.com/altmp/coreclr-module</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/altmp/coreclr-module</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageTags>altv gta bridge gta5 gtav</PackageTags>
         <PackageVersion>1.0.1</PackageVersion>

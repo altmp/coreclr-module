@@ -6,8 +6,8 @@
         <Authors>AltMp</Authors>
         <Description>AltV .NET Core Entity Sync</Description>
         <Copyright>AltMp</Copyright>
-        <PackageProjectUrl>https://github.com/FabianTerhorst/coreclr-module</PackageProjectUrl>
-        <RepositoryUrl>https://github.com/FabianTerhorst/coreclr-module</RepositoryUrl>
+        <PackageProjectUrl>https://github.com/altmp/coreclr-module</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/altmp/coreclr-module</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageTags>altv gta bridge gta5 gtav</PackageTags>
         <PackageLicenseFile>license.txt</PackageLicenseFile>

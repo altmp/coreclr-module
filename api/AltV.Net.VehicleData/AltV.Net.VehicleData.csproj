@@ -7,8 +7,8 @@
         <Authors>AltMp</Authors>
         <Description>AltV .NET VehicleData Api</Description>
         <Copyright>AltMp</Copyright>
-        <PackageProjectUrl>https://github.com/fabianterhorst/coreclr-module</PackageProjectUrl>
-        <RepositoryUrl>https://github.com/fabianterhorst/coreclr-module</RepositoryUrl>
+        <PackageProjectUrl>https://github.com/altmp/coreclr-module</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/altmp/coreclr-module</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageVersion>1.0.0-dev-preview</PackageVersion>
         <PackageLicenseFile>license.txt</PackageLicenseFile>
