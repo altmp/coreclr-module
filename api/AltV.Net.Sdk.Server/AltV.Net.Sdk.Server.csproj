@@ -4,8 +4,8 @@
         <Authors>AltMp</Authors>
         <Description>alt:V .NET server SDK</Description>
         <Copyright>AltMp</Copyright>
-        <PackageProjectUrl>https://github.com/FabianTerhorst/coreclr-module</PackageProjectUrl>
-        <RepositoryUrl>https://github.com/FabianTerhorst/coreclr-module</RepositoryUrl>
+        <PackageProjectUrl>https://github.com/altmp/coreclr-module</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/altmp/coreclr-module</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageTags>altv gta bridge gta5 gtav altvsdk</PackageTags>
         <PackageVersion>1.0.0</PackageVersion>

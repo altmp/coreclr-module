@@ -8,8 +8,8 @@
         <Authors>AltMp</Authors>
         <Description>AltV .NET Core Async Server Api</Description>
         <Copyright>AltMp</Copyright>
-        <PackageProjectUrl>https://github.com/FabianTerhorst/coreclr-module</PackageProjectUrl>
-        <RepositoryUrl>https://github.com/FabianTerhorst/coreclr-module</RepositoryUrl>
+        <PackageProjectUrl>https://github.com/altmp/coreclr-module</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/altmp/coreclr-module</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageTags>altv gta bridge</PackageTags>
         <PackageVersion>1.0.0</PackageVersion>
