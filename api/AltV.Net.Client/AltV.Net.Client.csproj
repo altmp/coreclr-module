@@ -2,9 +2,9 @@
 
     <PropertyGroup>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-        <Authors>FabianTerhorst,zziger,JuzTim</Authors>
+        <Authors>FabianTerhorst,Doxoh,zziger,JuzTim</Authors>
         <Description>AltV .NET Client</Description>
-        <Copyright>FabianTerhorst</Copyright>
+        <Copyright>FabianTerhorst,Doxoh</Copyright>
         <PackageProjectUrl>https://github.com/altmp/coreclr-module</PackageProjectUrl>
         <RepositoryUrl>https://github.com/altmp/coreclr-module</RepositoryUrl>
         <RepositoryType>git</RepositoryType>

@@ -1,9 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <Authors>FabianTerhorst</Authors>
+        <Authors>FabianTerhorst,Doxoh</Authors>
         <Description>AltV .NET Core Chat API</Description>
-        <Copyright>FabianTerhorst</Copyright>
+        <Copyright>FabianTerhorst,Doxoh</Copyright>
         <PackageProjectUrl>https://github.com/altmp/coreclr-module</PackageProjectUrl>
         <RepositoryUrl>https://github.com/altmp/coreclr-module</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
