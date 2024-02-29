@@ -249,17 +249,13 @@ namespace AltV.Net.Client
             DisconnectEventHandler.GetEvents().ForEachCatching(fn => fn(), $"event {nameof(OnPlayerDisconnect)}");
         }
 
-        public void OnPlayerEnterVehicle(IntPtr pointer, byte seat)
+        public void OnPlayerEnterVehicle(IntPtr pointer, BaseObjectType type, byte seat)
         {
-            var vehicle = PoolManager.Vehicle.Get(pointer);
+            var vehicle = (IVehicle)PoolManager.Get(pointer, type);
             if (vehicle is null)
             {
-                vehicle = PoolManager.LocalVehicle.Get(pointer);
-                if (vehicle is null)
-                {
-                    Console.WriteLine("Invalid vehicle: " + pointer);
-                    return;
-                }
+                Console.WriteLine("Invalid vehicle: " + pointer);
+                return;
             }
 
             EnterVehicleEventHandler.GetEvents().ForEachCatching(fn => fn(vehicle, seat), $"event {nameof(OnPlayerEnterVehicle)}");
@@ -479,17 +475,13 @@ namespace AltV.Net.Client
             RemoveEntityEventHandler.GetEvents().ForEachCatching(fn => fn(target), $"event {nameof(OnRemoveEntity)}");
         }
 
-        public void OnPlayerLeaveVehicle(IntPtr vehiclePtr, byte seat)
+        public void OnPlayerLeaveVehicle(IntPtr vehiclePtr, BaseObjectType type, byte seat)
         {
-            var vehicle = PoolManager.Vehicle.Get(vehiclePtr);
+            var vehicle = (IVehicle)PoolManager.Get(vehiclePtr, type);
             if (vehicle is null)
             {
-                vehicle = PoolManager.LocalVehicle.Get(vehiclePtr);
-                if (vehicle is null)
-                {
-                    Console.WriteLine("Invalid vehicle: " + vehiclePtr);
-                    return;
-                }
+                Console.WriteLine("Invalid vehicle: " + vehiclePtr);
+                return;
             }
 
             PlayerLeaveVehicleEventHandler.GetEvents().ForEachCatching(fn => fn(vehicle, seat), $"event {nameof(OnPlayerLeaveVehicle)}");
