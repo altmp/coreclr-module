@@ -69,44 +69,44 @@ namespace AltV.Net.Client.Elements.Pools
             IBaseObjectPool<IRmlDocument> rmlDocumentPool,
             IEntityPool<ILocalObject> localObjectPool,
             IEntityPool<IObject> objectPool,
-            IBaseObjectPool<IVirtualEntity> virtualEntitiyPool,
-            IBaseObjectPool<IVirtualEntityGroup> virtualEntitiyGroupPool,
+            IBaseObjectPool<IVirtualEntity> virtualEntityPool,
+            IBaseObjectPool<IVirtualEntityGroup> virtualEntityGroupPool,
             IBaseObjectPool<ITextLabel> textLabelPool,
             IBaseObjectPool<IColShape> colShapePool,
             IBaseObjectPool<ILocalVehicle> localVehiclePool,
             IBaseObjectPool<ILocalPed> localPedPool,
             IBaseObjectPool<IAudioFilter> audioFilterPool,
             IBaseObjectPool<IAudioOutput> audioOutputPool,
-            IBaseObjectPool<IAudioOutputFrontend> AudioOutputFrontendPool,
-            IBaseObjectPool<IAudioOutputAttached> AudioOutputAttachedPool,
-            IBaseObjectPool<IAudioOutputWorld> AudioOutputWorldPool,
+            IBaseObjectPool<IAudioOutputFrontend> audioOutputFrontendPool,
+            IBaseObjectPool<IAudioOutputAttached> audioOutputAttachedPool,
+            IBaseObjectPool<IAudioOutputWorld> audioOutputWorldPool,
             IBaseObjectPool<IFont> fontPool,
             IBaseObjectPool<IMarker> markerPool)
         {
-            this.Player = playerPool;
-            this.Vehicle = vehiclePool;
-            this.Ped = pedPool;
-            this.Blip = blipPool;
-            this.Checkpoint = checkpointPool;
-            this.Audio = audioPool;
-            this.HttpClient = httpClientPool;
-            this.WebSocketClient = webSocketClientPool;
-            this.WebView = webViewPool;
-            this.RmlElement = rmlElementPool;
-            this.RmlDocument = rmlDocumentPool;
-            this.LocalObject = localObjectPool;
-            this.Object = objectPool;
-            this.VirtualEntity = virtualEntitiyPool;
-            this.VirtualEntityGroup = virtualEntitiyGroupPool;
+            Player = playerPool;
+            Vehicle = vehiclePool;
+            Ped = pedPool;
+            Blip = blipPool;
+            Checkpoint = checkpointPool;
+            Audio = audioPool;
+            HttpClient = httpClientPool;
+            WebSocketClient = webSocketClientPool;
+            WebView = webViewPool;
+            RmlElement = rmlElementPool;
+            RmlDocument = rmlDocumentPool;
+            LocalObject = localObjectPool;
+            Object = objectPool;
+            VirtualEntity = virtualEntityPool;
+            VirtualEntityGroup = virtualEntityGroupPool;
             TextLabel = textLabelPool;
             ColShape = colShapePool;
             LocalVehicle = localVehiclePool;
             LocalPed = localPedPool;
             AudioFilter = audioFilterPool;
             AudioOutput = audioOutputPool;
-            AudioOutputFrontend = AudioOutputFrontendPool;
-            AudioOutputAttached = AudioOutputAttachedPool;
-            AudioOutputWorld = AudioOutputWorldPool;
+            AudioOutputFrontend = audioOutputFrontendPool;
+            AudioOutputAttached = audioOutputAttachedPool;
+            AudioOutputWorld = audioOutputWorldPool;
             Font = fontPool;
             Marker = markerPool;
         }
