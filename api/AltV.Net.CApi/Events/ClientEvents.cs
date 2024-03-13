@@ -19,14 +19,14 @@ namespace AltV.Net.CApi.ClientEvents
     public delegate void PlayerDisconnectModuleDelegate();
     public delegate void PlayerEnterVehicleModuleDelegate(IntPtr baseObject, BaseObjectType type, byte seat);
     public delegate void PlayerLeaveVehicleModuleDelegate(IntPtr baseObject, BaseObjectType type, byte seat);
-    public delegate void PlayerChangeVehicleSeatModuleDelegate(IntPtr pointer, byte oldSeat, byte newSeat);
-    public delegate void PlayerChangeAnimationModuleDelegate(IntPtr pointer, uint oldDict, uint newDict, uint oldName, uint newName);
-    public delegate void PlayerChangeInteriorModuleDelegate(IntPtr pointer, uint oldIntLoc, uint newIntLoc);
+    public delegate void PlayerChangeVehicleSeatModuleDelegate(IntPtr pointer, BaseObjectType type, byte oldSeat, byte newSeat);
+    public delegate void PlayerChangeAnimationModuleDelegate(IntPtr pointer, BaseObjectType type, uint oldDict, uint newDict, uint oldName, uint newName);
+    public delegate void PlayerChangeInteriorModuleDelegate(IntPtr pointer, BaseObjectType type, uint oldIntLoc, uint newIntLoc);
     public delegate void PlayerWeaponShootModuleDelegate(uint weapon, ushort totalAmmo, ushort ammoInClip);
     public delegate void PlayerWeaponChangeModuleDelegate(uint oldWeapon, uint newWeapon);
 
-    public delegate void GameEntityCreateModuleDelegate(IntPtr pointer, byte type);
-    public delegate void GameEntityDestroyModuleDelegate(IntPtr pointer, byte type);
+    public delegate void GameEntityCreateModuleDelegate(IntPtr pointer, BaseObjectType type);
+    public delegate void GameEntityDestroyModuleDelegate(IntPtr pointer, BaseObjectType type);
 
     public delegate void AnyResourceErrorModuleDelegate(string name);
     public delegate void AnyResourceStartModuleDelegate(string name);
@@ -78,8 +78,8 @@ namespace AltV.Net.CApi.ClientEvents
     public delegate void EntityHitEntityModuleDelegate(IntPtr targetPointer, BaseObjectType targetType, IntPtr damagerPointer,
         BaseObjectType damagerType, uint weaponHash);
 
-    public delegate void PlayerStartEnterVehicleModuleDelegate(IntPtr targetPointer, IntPtr player, byte seat);
-    public delegate void PlayerStartLeaveVehicleModuleDelegate(IntPtr targetPointer, IntPtr player, byte seat);
+    public delegate void PlayerStartEnterVehicleModuleDelegate(IntPtr targetPointer, BaseObjectType type, IntPtr player, BaseObjectType playerType, byte seat);
+    public delegate void PlayerStartLeaveVehicleModuleDelegate(IntPtr targetPointer, BaseObjectType type, IntPtr player, BaseObjectType playerType, byte seat);
 
     public delegate void PlayerBulletHitModuleDelegate(uint weapon, IntPtr victimPointer, BaseObjectType victimType,
         Position pos);
