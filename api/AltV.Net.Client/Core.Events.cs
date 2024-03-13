@@ -261,9 +261,9 @@ namespace AltV.Net.Client
             EnterVehicleEventHandler.GetEvents().ForEachCatching(fn => fn(vehicle, seat), $"event {nameof(OnPlayerEnterVehicle)}");
         }
 
-        public void OnGameEntityCreate(IntPtr pointer, byte type)
+        public void OnGameEntityCreate(IntPtr pointer, BaseObjectType type)
         {
-            var baseObject = PoolManager.Get(pointer, (BaseObjectType) type);
+            var baseObject = PoolManager.Get(pointer, type);
             if (baseObject is not IEntity entity)
             {
                 Console.WriteLine("Invalid entity: " + pointer + " " + (baseObject == null));
@@ -273,9 +273,9 @@ namespace AltV.Net.Client
             GameEntityCreateEventHandler.GetEvents().ForEachCatching(fn => fn(entity), $"event {nameof(OnGameEntityCreate)}");
         }
 
-        public void OnGameEntityDestroy(IntPtr pointer, byte type)
+        public void OnGameEntityDestroy(IntPtr pointer, BaseObjectType type)
         {
-            var baseObject = PoolManager.Get(pointer, (BaseObjectType) type);
+            var baseObject = PoolManager.Get(pointer, type);
             if (baseObject is not IEntity entity)
             {
                 Console.WriteLine("Invalid entity: " + pointer);
@@ -339,14 +339,14 @@ namespace AltV.Net.Client
             GlobalSyncedMetaChangeEventHandler.GetEvents().ForEachCatching(fn => fn(key, value.ToObject(), oldValue.ToObject()), $"event {nameof(OnGlobalSyncedMetaChange)}");
         }
 
-        public void OnPlayerChangeVehicleSeat(IntPtr vehiclePtr, byte oldSeat, byte newSeat)
+        public void OnPlayerChangeVehicleSeat(IntPtr vehiclePtr, BaseObjectType type, byte oldSeat, byte newSeat)
         {
-            var vehicle = PoolManager.Vehicle.Get(vehiclePtr);
+            var vehicle = (IVehicle)PoolManager.Get(vehiclePtr, type);
             PlayerChangeVehicleSeatEventHandler.GetEvents().ForEachCatching(fn => fn(vehicle, oldSeat, newSeat), $"event {nameof(OnPlayerChangeVehicleSeat)}");
         }
-        public void OnPlayerChangeAnimation(IntPtr playerPtr, uint oldDict, uint newDict, uint oldName, uint newName)
+        public void OnPlayerChangeAnimation(IntPtr playerPtr, BaseObjectType type, uint oldDict, uint newDict, uint oldName, uint newName)
         {
-            var player = PoolManager.Player.Get(playerPtr);
+            var player = (IPlayer)PoolManager.Get(playerPtr, type);
             if (player == null)
             {
                 Alt.LogWarning("OnPlayerChangeAnimation: Invalid player " + playerPtr);
@@ -356,9 +356,9 @@ namespace AltV.Net.Client
             PlayerChangeAnimationEventHandler.GetEvents().ForEachCatching(fn => fn(player, oldDict, newDict, oldName, newName), $"event {nameof(OnPlayerChangeAnimation)}");
         }
 
-        public void OnPlayerChangeInterior(IntPtr playerPtr, uint oldIntLoc, uint newIntLoc)
+        public void OnPlayerChangeInterior(IntPtr playerPtr, BaseObjectType type, uint oldIntLoc, uint newIntLoc)
         {
-            var player = PoolManager.Player.Get(playerPtr);
+            var player = (IPlayer)PoolManager.Get(playerPtr, type);
             if (player == null)
             {
                 Alt.LogWarning("OnPlayerChangeInterior: Invalid player " + playerPtr);
@@ -654,18 +654,18 @@ namespace AltV.Net.Client
             MetaChangeEventHandler.GetEvents().ForEachCatching(fn => fn(target, key, value.ToObject(), oldValue.ToObject()), $"event {nameof(OnMetaChange)}");
         }
 
-        public void OnPlayerStartEnterVehicle(IntPtr targetpointer, IntPtr playerPointer, byte seat)
+        public void OnPlayerStartEnterVehicle(IntPtr targetpointer, BaseObjectType type, IntPtr playerPointer, BaseObjectType playerType, byte seat)
         {
-            var vehicle = PoolManager.Vehicle.Get(targetpointer);
-            var player = PoolManager.Player.Get(playerPointer);
+            var vehicle = (IVehicle)PoolManager.Get(targetpointer, type);
+            var player = (IPlayer)PoolManager.Get(playerPointer, playerType);
 
             PlayerStartEnterVehicleEventHandler.GetEvents().ForEachCatching(fn => fn(vehicle, player, seat), $"event {nameof(OnPlayerStartEnterVehicle)}");
         }
 
-        public void OnPlayerStartLeaveVehicle(IntPtr targetpointer, IntPtr playerPointer, byte seat)
+        public void OnPlayerStartLeaveVehicle(IntPtr targetpointer, BaseObjectType type, IntPtr playerPointer, BaseObjectType playerType, byte seat)
         {
-            var vehicle = PoolManager.Vehicle.Get(targetpointer);
-            var player = PoolManager.Player.Get(playerPointer);
+            var vehicle = (IVehicle)PoolManager.Get(targetpointer, type);
+            var player = (IPlayer)PoolManager.Get(playerPointer, playerType);
 
             PlayerStartLeaveVehicleEventHandler.GetEvents().ForEachCatching(fn => fn(vehicle, player, seat), $"event {nameof(OnPlayerStartLeaveVehicle)}");
         }
