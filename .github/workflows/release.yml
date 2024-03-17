@@ -264,7 +264,7 @@ jobs:
           echo "branch=${build_info%%/*}" >> $GITHUB_OUTPUT
           echo "version=${build_info##*/}" >> $GITHUB_OUTPUT
           echo "sdk_commit=$(cat ./modules/sdk_version.txt)" >> $GITHUB_OUTPUT
-      - run: npm i @altmp/upload-tool@1.2.0
+      - run: npm i @altmp/upload-tool@latest fast-xml-parser@4.3.6
       - run: npx alt-upload linux coreclr-module/$BRANCH/x64_linux $VERSION $SDK_VERSION
         working-directory: ./modules
         env:
