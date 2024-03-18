@@ -170,6 +170,18 @@ namespace AltV.Net.Client
             remove => CoreImpl.NetOwnerChangeEventHandler.Remove(value);
         }
 
+        public static event PlayerChangeAnimationDelegate OnPLayerChangeAnimation
+        {
+            add => CoreImpl.PlayerChangeAnimationEventHandler.Add(value);
+            remove => CoreImpl.PlayerChangeAnimationEventHandler.Remove(value);
+        }
+
+        public static event PlayerChangeInteriorDelegate OnPlayerChangeInterior
+        {
+            add => CoreImpl.PlayerChangeInteriorEventHandler.Add(value);
+            remove => CoreImpl.PlayerChangeInteriorEventHandler.Remove(value);
+        }
+
         public static event WeaponDamageDelegate OnWeaponDamage
         {
             add => CoreImpl.WeaponDamageEventHandler.Add(value);
