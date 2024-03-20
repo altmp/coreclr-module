@@ -72,6 +72,11 @@ namespace AltV.Net.Data
             return Roll.Equals(other.Roll) && Pitch.Equals(other.Pitch) && Yaw.Equals(other.Yaw);
         }
 
+        public Rotation ToRadians()
+        {
+            return new Rotation((Roll * MathF.PI) / 180, (Pitch * MathF.PI) / 180, (Yaw * MathF.PI) / 180);
+        }
+
         public override int GetHashCode() => HashCode.Combine(Roll.GetHashCode(), Pitch.GetHashCode(), Yaw.GetHashCode());
     }
 }

@@ -1,4 +1,5 @@
 using System;
+using System.Drawing;
 using System.Numerics;
 using System.Runtime.InteropServices;
 using System.Runtime.Serialization;
@@ -103,6 +104,11 @@ namespace AltV.Net.Data
             var diffY = Y - b.Y;
             var diffZ = Z - b.Z;
             return MathF.Sqrt(diffX * diffX + diffY * diffY + diffZ * diffZ);
+        }
+
+        public Position ToRadians()
+        {
+            return new Position((X * MathF.PI) / 180, (Y * MathF.PI) / 180, (Z * MathF.PI) / 180);
         }
 
         public static Position operator +(Position a, Position b) => new Position(a.X + b.X, a.Y + b.Y, a.Z + b.Z);
