@@ -10,7 +10,7 @@ $start = $pwd
 
 cd $path
 
-$dotnetRelease = Invoke-WebRequest 'https://dotnetcli.blob.core.windows.net/dotnet/release-metadata/6.0/releases.json' | ConvertFrom-Json
+$dotnetRelease = Invoke-WebRequest 'https://dotnetcli.blob.core.windows.net/dotnet/release-metadata/8.0/releases.json' | ConvertFrom-Json
 
 $dotnetVersion = $dotnetRelease."latest-release" 
 

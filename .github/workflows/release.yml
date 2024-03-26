@@ -42,7 +42,7 @@ jobs:
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: 6.0.x
+          dotnet-version: 8.0.x
       - id: build_info
         run: |
           branch=$(git ls-remote --heads origin | grep $GITHUB_SHA | sed "s/.*\///")
@@ -91,24 +91,24 @@ jobs:
       - name: Build
         working-directory: ./api
         run: |
-          dotnet publish AltV.Net.Host -c Release -f net6.0
-          dotnet publish AltV.Net.Host -c Release -f net6.0
-          dotnet publish AltV.Net.Shared -c Release -f net6.0
-          dotnet publish AltV.Net.CApi -c Release -f net6.0
-          dotnet publish AltV.Net -c Release -f net6.0
-          dotnet publish AltV.Net -c Debug -f net6.0
-          dotnet publish AltV.Net.Async -c Release -f net6.0
-          dotnet publish AltV.Net.Async -c Debug -f net6.0
-          dotnet publish AltV.Net.Interactions -c Release -f net6.0
+          dotnet publish AltV.Net.Host -c Release -f net8.0
+          dotnet publish AltV.Net.Host -c Release -f net8.0
+          dotnet publish AltV.Net.Shared -c Release -f net8.0
+          dotnet publish AltV.Net.CApi -c Release -f net8.0
+          dotnet publish AltV.Net -c Release -f net8.0
+          dotnet publish AltV.Net -c Debug -f net8.0
+          dotnet publish AltV.Net.Async -c Release -f net8.0
+          dotnet publish AltV.Net.Async -c Debug -f net8.0
+          dotnet publish AltV.Net.Interactions -c Release -f net8.0
           dotnet publish AltV.Net.Async.CodeGen -c Release -f netstandard2.0
-          dotnet publish AltV.Net.Resources.Chat.Api -c Release -f net6.0
-          dotnet publish AltV.Net.EntitySync.ServerEvent -c Release -f net6.0
-          dotnet publish AltV.Net.Client -c Release -f net6.0
-          dotnet publish AltV.Net.Client.Async -c Release -f net6.0
-          dotnet publish AltV.Net.ColShape -c Release -f net6.0
-          dotnet publish AltV.Net.Sdk.Server -c Release -f net6.0
-          dotnet publish AltV.Net.Sdk.Client -c Release -f net6.0
-          dotnet publish AltV.Net.Sdk.Shared -c Release -f net6.0
+          dotnet publish AltV.Net.Resources.Chat.Api -c Release -f net8.0
+          dotnet publish AltV.Net.EntitySync.ServerEvent -c Release -f net8.0
+          dotnet publish AltV.Net.Client -c Release -f net8.0
+          dotnet publish AltV.Net.Client.Async -c Release -f net8.0
+          dotnet publish AltV.Net.ColShape -c Release -f net8.0
+          dotnet publish AltV.Net.Sdk.Server -c Release -f net8.0
+          dotnet publish AltV.Net.Sdk.Client -c Release -f net8.0
+          dotnet publish AltV.Net.Sdk.Shared -c Release -f net8.0
       - run: |
           mkdir -p ./modules/linux
           mkdir -p ./modules/windows
