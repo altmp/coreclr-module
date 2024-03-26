@@ -16,28 +16,28 @@ jobs:
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: 6.0.x
+        dotnet-version: 8.0.x
     - name: Build with dotnet
       working-directory: ./api
       run: |
-        dotnet build AltV.Net.Host -c Release -f net6.0
-        dotnet build AltV.Net.Host -c Release -f net6.0
-        dotnet build AltV.Net.Shared -c Release -f net6.0
-        dotnet build AltV.Net.CApi -c Release -f net6.0
-        dotnet build AltV.Net -c Release -f net6.0
-        dotnet build AltV.Net -c Debug -f net6.0
-        dotnet build AltV.Net.Async -c Release -f net6.0
-        dotnet build AltV.Net.Async -c Debug -f net6.0
-        dotnet build AltV.Net.Interactions -c Release -f net6.0
+        dotnet build AltV.Net.Host -c Release -f net8.0
+        dotnet build AltV.Net.Host -c Release -f net8.0
+        dotnet build AltV.Net.Shared -c Release -f net8.0
+        dotnet build AltV.Net.CApi -c Release -f net8.0
+        dotnet build AltV.Net -c Release -f net8.0
+        dotnet build AltV.Net -c Debug -f net8.0
+        dotnet build AltV.Net.Async -c Release -f net8.0
+        dotnet build AltV.Net.Async -c Debug -f net8.0
+        dotnet build AltV.Net.Interactions -c Release -f net8.0
         dotnet build AltV.Net.Async.CodeGen -c Release -f netstandard2.0
-        dotnet build AltV.Net.Resources.Chat.Api -c Release -f net6.0
-        dotnet build AltV.Net.EntitySync.ServerEvent -c Release -f net6.0
-        dotnet build AltV.Net.Client -c Release -f net6.0
-        dotnet build AltV.Net.Client.Async -c Release -f net6.0
-        dotnet build AltV.Net.ColShape -c Release -f net6.0
-        dotnet build AltV.Net.Sdk.Server -c Release -f net6.0
-        dotnet build AltV.Net.Sdk.Client -c Release -f net6.0
-        dotnet build AltV.Net.Sdk.Shared -c Release -f net6.0
+        dotnet build AltV.Net.Resources.Chat.Api -c Release -f net8.0
+        dotnet build AltV.Net.EntitySync.ServerEvent -c Release -f net8.0
+        dotnet build AltV.Net.Client -c Release -f net8.0
+        dotnet build AltV.Net.Client.Async -c Release -f net8.0
+        dotnet build AltV.Net.ColShape -c Release -f net8.0
+        dotnet build AltV.Net.Sdk.Server -c Release -f net8.0
+        dotnet build AltV.Net.Sdk.Client -c Release -f net8.0
+        dotnet build AltV.Net.Sdk.Shared -c Release -f net8.0
   build:
 
     runs-on: ubuntu-latest
@@ -47,25 +47,25 @@ jobs:
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: 6.0.x
+        dotnet-version: 8.0.x
     - name: Build with dotnet
       working-directory: ./api
       run: |
-        dotnet build AltV.Net.Host -c Release -f net6.0
-        dotnet build AltV.Net.Host -c Release -f net6.0
-        dotnet build AltV.Net.Shared -c Release -f net6.0
-        dotnet build AltV.Net.CApi -c Release -f net6.0
-        dotnet build AltV.Net -c Release -f net6.0
-        dotnet build AltV.Net -c Debug -f net6.0
-        dotnet build AltV.Net.Async -c Release -f net6.0
-        dotnet build AltV.Net.Async -c Debug -f net6.0
-        dotnet build AltV.Net.Interactions -c Release -f net6.0
+        dotnet build AltV.Net.Host -c Release -f net8.0
+        dotnet build AltV.Net.Host -c Release -f net8.0
+        dotnet build AltV.Net.Shared -c Release -f net8.0
+        dotnet build AltV.Net.CApi -c Release -f net8.0
+        dotnet build AltV.Net -c Release -f net8.0
+        dotnet build AltV.Net -c Debug -f net8.0
+        dotnet build AltV.Net.Async -c Release -f net8.0
+        dotnet build AltV.Net.Async -c Debug -f net8.0
+        dotnet build AltV.Net.Interactions -c Release -f net8.0
         dotnet build AltV.Net.Async.CodeGen -c Release -f netstandard2.0
-        dotnet build AltV.Net.Resources.Chat.Api -c Release -f net6.0
-        dotnet build AltV.Net.EntitySync.ServerEvent -c Release -f net6.0
-        dotnet build AltV.Net.Client -c Release -f net6.0
-        dotnet build AltV.Net.Client.Async -c Release -f net6.0
-        dotnet build AltV.Net.ColShape -c Release -f net6.0
-        dotnet build AltV.Net.Sdk.Server -c Release -f net6.0
-        dotnet build AltV.Net.Sdk.Client -c Release -f net6.0
-        dotnet build AltV.Net.Sdk.Shared -c Release -f net6.0
+        dotnet build AltV.Net.Resources.Chat.Api -c Release -f net8.0
+        dotnet build AltV.Net.EntitySync.ServerEvent -c Release -f net8.0
+        dotnet build AltV.Net.Client -c Release -f net8.0
+        dotnet build AltV.Net.Client.Async -c Release -f net8.0
+        dotnet build AltV.Net.ColShape -c Release -f net8.0
+        dotnet build AltV.Net.Sdk.Server -c Release -f net8.0
+        dotnet build AltV.Net.Sdk.Client -c Release -f net8.0
+        dotnet build AltV.Net.Sdk.Shared -c Release -f net8.0
